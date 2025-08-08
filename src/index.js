@@ -5,7 +5,12 @@ function demoFunction() {
   return 'This is a demo function';
 }
 
-// Function to calculate the factorial of a number
+/**
+ * Calculates the factorial of a non-negative integer.
+ * @param {number} n - The number for which to compute the factorial. Must be non-negative.
+ * @return {number} The factorial of the input number.
+ * @throws {Error} If the input is a negative number.
+ */
 function factorial(n) {
   if (n < 0) {
     throw new Error('Factorial is not defined for negative numbers');
@@ -26,7 +31,11 @@ function isPalindrome(str) {
   return cleaned === reversed;
 }
 
-// Function to generate Fibonacci sequence up to n terms
+/**
+ * Generates the Fibonacci sequence as an array containing the first `n` terms.
+ * @param {number} n - The number of terms to generate.
+ * @return {number[]} An array of the first `n` Fibonacci numbers.
+ */
 function fibonacci(n) {
   if (n <= 0) return [];
   if (n === 1) return [0];
@@ -40,7 +49,12 @@ function fibonacci(n) {
   return sequence;
 }
 
-// New function to calculate the greatest common divisor
+/**
+ * Calculates the greatest common divisor (GCD) of two integers using the Euclidean algorithm.
+ * @param {number} a - The first integer.
+ * @param {number} b - The second integer.
+ * @return {number} The greatest common divisor of `a` and `b`.
+ */
 function gcd(a, b) {
   // Using Euclidean algorithm
   while (b !== 0) {
@@ -51,7 +65,11 @@ function gcd(a, b) {
   return Math.abs(a);
 }
 
-// New function to check if a number is prime
+/**
+ * Determines whether a given integer is a prime number.
+ * @param {number} num - The integer to check for primality.
+ * @return {boolean} True if the number is prime; otherwise, false.
+ */
 function isPrime(num) {
   if (num <= 1) return false;
   if (num <= 3) return true;
@@ -66,7 +84,10 @@ function isPrime(num) {
   return true;
 }
 
-// Improved function with new features
+/**
+ * Returns a message indicating the function includes new features.
+ * @return {string} A string stating the function is improved with new features.
+ */
 function improvedFunction() {
   return 'This is an improved function with new features!';
 }

@@ -42,7 +42,12 @@ function deepClone(obj) {
   }
 }
 
-// New utility function to debounce a function
+/**
+ * Creates a debounced version of a function that delays its execution until after a specified delay has elapsed since the last invocation.
+ * @param {Function} func - The function to debounce.
+ * @param {number} delay - The delay in milliseconds.
+ * @return {Function} A debounced function.
+ */
 function debounce(func, delay) {
   let timeoutId;
   return function (...args) {
@@ -51,7 +56,12 @@ function debounce(func, delay) {
   };
 }
 
-// Throttle function to limit the rate at which a function can fire
+/**
+ * Creates a throttled version of a function that invokes at most once per specified time interval.
+ * @param {Function} func - The function to throttle.
+ * @param {number} limit - The minimum time interval in milliseconds between allowed calls.
+ * @return {Function} A throttled function that limits invocation frequency.
+ */
 function throttle(func, limit) {
   let inThrottle;
   return function (...args) {
