@@ -5,4 +5,12 @@ function demoFunction() {
   return 'This is a demo function';
 }
 
-module.exports = demoFunction;
+// New feature added in feature branch
+function improvedFunction() {
+  return 'This is an improved function with new features!';
+}
+
+module.exports = {
+  demoFunction,
+  improvedFunction
+};
