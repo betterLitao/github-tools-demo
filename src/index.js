@@ -15,12 +15,8 @@ function factorial(n) {
     return 1;
   }
   
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result *= i;
-  }
-  
-  return result;
+  // Using recursive approach for better readability
+  return n * factorial(n - 1);
 }
 
 // Function to check if a string is a palindrome
@@ -44,7 +40,33 @@ function fibonacci(n) {
   return sequence;
 }
 
-// New feature added in feature branch
+// New function to calculate the greatest common divisor
+function gcd(a, b) {
+  // Using Euclidean algorithm
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return Math.abs(a);
+}
+
+// New function to check if a number is prime
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  if (num % 2 === 0 || num % 3 === 0) return false;
+  
+  // Check using 6k±1 optimization
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Improved function with new features
 function improvedFunction() {
   return 'This is an improved function with new features!';
 }
@@ -54,5 +76,7 @@ module.exports = {
   improvedFunction,
   factorial,
   isPalindrome,
-  fibonacci
+  fibonacci,
+  gcd,
+  isPrime
 };
