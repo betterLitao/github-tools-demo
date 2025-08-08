@@ -1,5 +1,5 @@
 // Demo file to showcase the new features
-const { factorial, isPalindrome, fibonacci } = require('./index');
+const { factorial, isPalindrome, fibonacci, gcd, isPrime } = require('./index');
 const { generateId, deepClone, debounce } = require('./utils');
 
 console.log('=== GitHub Tools Demo ===');
@@ -18,6 +18,18 @@ console.log(`Is "A man a plan a canal Panama" a palindrome? ${isPalindrome('A ma
 // Test Fibonacci function
 console.log('\n--- Fibonacci Function Tests ---');
 console.log(`First 10 Fibonacci numbers: ${fibonacci(10).join(', ')}`);
+
+// Test GCD function
+console.log('\n--- Greatest Common Divisor Tests ---');
+console.log(`GCD of 48 and 18: ${gcd(48, 18)}`);
+console.log(`GCD of 100 and 25: ${gcd(100, 25)}`);
+console.log(`GCD of 17 and 13: ${gcd(17, 13)}`);
+
+// Test Prime function
+console.log('\n--- Prime Number Tests ---');
+console.log(`Is 17 a prime number? ${isPrime(17)}`);
+console.log(`Is 25 a prime number? ${isPrime(25)}`);
+console.log(`Is 97 a prime number? ${isPrime(97)}`);
 
 // Test generateId function
 console.log('\n--- Generate ID Function Tests ---');
