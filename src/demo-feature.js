@@ -2,37 +2,44 @@
 // It contains some potential improvements that CodeRabbit might suggest
 
 function calculateTotalPrice(items) {
-  let total = 0;
-  for (let i = 0; i < items.length; i++) {
-    total = total + items[i].price * items[i].quantity;
-  }
-  return total;
+  // Using modern JavaScript features like reduce instead of for loop
+  return items.reduce((total, item) => {
+    return total + (item.price * item.quantity);
+  }, 0);
 }
 
 function getUserDisplayName(user) {
-  if (user.firstName && user.lastName) {
-    return user.firstName + ' ' + user.lastName;
-  } else if (user.firstName) {
-    return user.firstName;
-  } else if (user.lastName) {
-    return user.lastName;
+  // Simplified with nullish coalescing and optional chaining
+  const firstName = user?.firstName ?? '';
+  const lastName = user?.lastName ?? '';
+  
+  if (firstName && lastName) {
+    return `${firstName} ${lastName}`;
+  } else if (firstName) {
+    return firstName;
+  } else if (lastName) {
+    return lastName;
   } else {
     return 'Anonymous';
   }
 }
 
 function processItems(items) {
-  var results = [];
-  for (var j = 0; j < items.length; j++) {
-    if (items[j].active === true) {
-      results.push(items[j]);
-    }
-  }
-  return results;
+  // Using filter instead of for loop with push
+  return items.filter(item => item.active === true);
+}
+
+// New function to demonstrate additional changes
+function formatCurrency(amount, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency
+  }).format(amount);
 }
 
 module.exports = {
   calculateTotalPrice,
   getUserDisplayName,
-  processItems
+  processItems,
+  formatCurrency
 };
