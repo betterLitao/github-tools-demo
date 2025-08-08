@@ -16,6 +16,8 @@ This is a demo repository to showcase how to use GitHub tools.
 - `factorial(n)`: Calculate the factorial of a number
 - `isPalindrome(str)`: Check if a string is a palindrome
 - `fibonacci(n)`: Generate a Fibonacci sequence with n terms
+- `gcd(a, b)`: Calculate the greatest common divisor of two numbers
+- `isPrime(num)`: Check if a number is a prime number
 
 ### Utility Functions (in `src/utils.js`)
 - `generateId(length)`: Generate a random ID with specified length
