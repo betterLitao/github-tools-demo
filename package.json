@@ -1,6 +1,6 @@
 {
   "name": "github-tools-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A demo repository to showcase GitHub tools usage",
   "main": "index.js",
   "scripts": {
