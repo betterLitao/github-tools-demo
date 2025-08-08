@@ -51,10 +51,23 @@ function debounce(func, delay) {
   };
 }
 
+// Throttle function to limit the rate at which a function can fire
+function throttle(func, limit) {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}
+
 module.exports = {
   formatDate,
   capitalize,
   generateId,
   deepClone,
-  debounce
+  debounce,
+  throttle
 };
