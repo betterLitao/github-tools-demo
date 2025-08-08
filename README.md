@@ -25,6 +25,12 @@ This is a demo repository to showcase how to use GitHub tools.
 ### Demo File
 - `src/demo.js`: Demonstrates the usage of all new functions
 
+## GitHub PR Reference Example
+
+This repository also demonstrates how to reference Pull Requests in commit messages. When you include `Ref: #<PR_NUMBER>` in your commit message, GitHub will show "added a commit that referenced this pull request" in the PR timeline.
+
+For example, see the commit [c94e621](https://github.com/betterLitao/github-tools-demo/commit/c94e621687673720b372eeb5247d6ef924686856) which references [PR #6](https://github.com/betterLitao/github-tools-demo/pull/6).
+
 ## Usage
 
 This repository demonstrates the basic usage of GitHub tools available in this environment. You can run the demo with:
