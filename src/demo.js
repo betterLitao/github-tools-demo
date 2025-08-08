@@ -1,6 +1,6 @@
 // Demo file to showcase the new features
 const { factorial, isPalindrome, fibonacci, gcd, isPrime } = require('./index');
-const { generateId, deepClone, debounce } = require('./utils');
+const { generateId, deepClone, debounce, throttle } = require('./utils');
 
 console.log('=== GitHub Tools Demo ===');
 
@@ -63,5 +63,18 @@ debouncedFunction();
 debouncedFunction();
 debouncedFunction();
 console.log('Debounced function will execute once after 1 second delay.');
+
+// Test throttle function
+console.log('\n--- Throttle Function Tests ---');
+const throttledFunction = throttle(() => {
+  console.log('Throttled function executed at:', new Date().toISOString());
+}, 2000); // 2 second limit
+
+console.log('Calling throttled function 5 times rapidly...');
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    throttledFunction();
+  }, i * 500); // Call every 500ms
+}
 
 console.log('\n=== Demo Complete ===');
