@@ -1,0 +1,12 @@
+{
+  "name": "github-tools-demo",
+  "version": "1.0.0",
+  "description": "A demo repository to showcase GitHub tools usage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["github", "demo", "tools"],
+  "author": "Assistant",
+  "license": "MIT"
+}
